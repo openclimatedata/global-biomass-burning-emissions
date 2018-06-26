@@ -47,6 +47,7 @@ def calculate_annual_series(nc_filepath):
     return series
 
 df = pd.DataFrame(index=range(1750, 2016))
+df.index.name = "Year"
 
 for url, checksum in files:
     name = Path(url).name
