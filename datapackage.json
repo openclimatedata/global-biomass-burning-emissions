@@ -1,0 +1,78 @@
+{
+  "resources": [
+    {
+      "name": "global-biomass-burning-emissions",
+      "path": "data/global-biomass-burning-emissions.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "integer",
+            "description": "Year"
+          },
+          {
+            "name": "BC",
+            "type": "number",
+            "description": "Global Biomass Burning BC emissions",
+            "unit": "Tg"
+          },
+          {
+            "name": "CH4",
+            "type": "number",
+            "description": "Global Biomass Burning CH4 emissions",
+            "unit": "Tg"
+          },
+          {
+            "name": "CO",
+            "type": "number",
+            "description": "Global Biomass Burning CO emissions",
+            "unit": "Tg"
+          },
+          {
+            "name": "OC",
+            "type": "number",
+            "description": "Global Biomass Burning OC emissions",
+            "unit": "Tg"
+          },
+          {
+            "name": "N2O",
+            "type": "number",
+            "description": "Global Biomass Burning N2O emissions",
+            "unit": "Tg"
+          },
+          {
+            "name": "NMVOC",
+            "type": "number",
+            "description": "Global Biomass Burning NMVOC emissions",
+            "unit": "Tg"
+          },
+          {
+            "name": "SO2",
+            "type": "number",
+            "description": "Global Biomass Burning SO2 emissions",
+            "unit": "Tg"
+          },
+          {
+            "name": "NH3",
+            "type": "number",
+            "description": "Global Biomass Burning NH3 emissions",
+            "unit": "Tg"
+          },
+          {
+            "name": "NOx",
+            "type": "number",
+            "description": "Global Biomass Burning NOx emissions",
+            "unit": "Tg"
+          }
+        ]
+      }
+    }
+  ],
+  "name": "global-biomass-burning-emissions",
+  "title": "Global Biomass Burning Emissions",
+  "description": "Files to download are selected from https://esgf-data.dkrz.de/search/esgf-dkrz/,",
+  "homepage": "https://github.com/openclimatedata/global-biomass-burning-emissions",
+  "repository": "git://github.com/openclimatedata/global-biomass-burning-emissions.git"
+}
