@@ -1,5 +1,9 @@
 # Global Biomass Burning Emissions
 
+
+
+## Preparation
+
 Files to download are selected from https://esgf-data.dkrz.de/search/esgf-dkrz/,
 selecting VUA as "Institution ID" and the following variables:
 
@@ -16,14 +20,16 @@ selecting VUA as "Institution ID" and the following variables:
 
 The result list with direct HTTP links and checksums is stored in `files.txt`.
 
-To download the files into `raw_data` run `make download`.
+To download the files into `raw_data` run `make download`. This requires around
+11 GB of disk space.
 
 Downloaded files are processed in `scripts/process.py` and saved as annual
 values in `data/global-biomass-burning-emissions.csv`.
 
 Run `make` to generate the CSV file from the downloaded files.
 
-# License
+
+## License
 
 This Data Package is based on data from
 
