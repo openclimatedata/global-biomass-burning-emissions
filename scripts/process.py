@@ -86,6 +86,7 @@ for url, checksum in files:
     else:
         print("Not found: {}.".format(name))
 
+df = df.sort_index(axis=1)
 print(df.head())
 print(df.tail())
 
