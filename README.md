@@ -3,25 +3,25 @@
 Files to download are selected from https://esgf-data.dkrz.de/search/esgf-dkrz/,
 selecting VUA as "Institution ID" and the following variables:
 
-BC (1)
-CH4 (1)
-CO (1)
-N2O (1)
-NH3 (1)
-NMVOC (1)
-NOx (1)
-OC (1)
-SO2 (1)
-gridcellarea (1)
+- BC (1)
+- CH4 (1)
+- CO (1)
+- N2O (1)
+- NH3 (1)
+- NMVOC (1)
+- NOx (1)
+- OC (1)
+- SO2 (1)
+- gridcellarea (1)
 
-The result list with opened HTTP links and checksums is pasted in `files.txt`.
+The result list with direct HTTP links and checksums is stored in `files.txt`.
 
 To download the files into `raw_data` run `make download`.
 
 Downloaded files are processed in `scripts/process.py` and saved as annual
-values in `data/global-fire-emissions.csv`.
+values in `data/global-biomass-burning-emissions.csv`.
 
-Run `make process` to generate the CSV file.
+Run `make` to generate the CSV file from the downloaded files.
 
 # License
 
