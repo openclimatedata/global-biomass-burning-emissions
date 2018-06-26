@@ -16,7 +16,7 @@ gridcellarea (1)
 
 The result list with opened HTTP links and checksums is pasted in `files.txt`.
 
-Do download the files into `raw_data` run `make data`.
+To download the files into `raw_data` run `make data`.
 
 Downloaded files are processed in `scripts/process.py` and saved as annual
 values in `data/global-fire-emissions.csv`.
