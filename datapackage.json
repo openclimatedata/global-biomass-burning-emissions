@@ -31,27 +31,9 @@
             "unit": "Tg"
           },
           {
-            "name": "OC",
-            "type": "number",
-            "description": "Global Biomass Burning OC emissions",
-            "unit": "Tg"
-          },
-          {
             "name": "N2O",
             "type": "number",
             "description": "Global Biomass Burning N2O emissions",
-            "unit": "Tg"
-          },
-          {
-            "name": "NMVOC",
-            "type": "number",
-            "description": "Global Biomass Burning NMVOC emissions",
-            "unit": "Tg"
-          },
-          {
-            "name": "SO2",
-            "type": "number",
-            "description": "Global Biomass Burning SO2 emissions",
             "unit": "Tg"
           },
           {
@@ -61,12 +43,31 @@
             "unit": "Tg"
           },
           {
+            "name": "NMVOC",
+            "type": "number",
+            "description": "Global Biomass Burning NMVOC emissions",
+            "unit": "Tg"
+          },
+          {
             "name": "NOx",
             "type": "number",
             "description": "Global Biomass Burning NOx emissions",
             "unit": "Tg"
+          },
+          {
+            "name": "OC",
+            "type": "number",
+            "description": "Global Biomass Burning OC emissions",
+            "unit": "Tg"
+          },
+          {
+            "name": "SO2",
+            "type": "number",
+            "description": "Global Biomass Burning SO2 emissions",
+            "unit": "Tg"
           }
-        ]
+        ],
+        "primaryKey": "Year"
       }
     }
   ],
