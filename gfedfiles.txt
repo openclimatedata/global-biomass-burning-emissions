@@ -1,0 +1,8 @@
+https://www.geo.vu.nl/~gwerf/GFED/GFED4/tables/GFED4.1s_BC.txt
+https://www.geo.vu.nl/~gwerf/GFED/GFED4/tables/GFED4.1s_CH4.txt
+https://www.geo.vu.nl/~gwerf/GFED/GFED4/tables/GFED4.1s_CO.txt
+https://www.geo.vu.nl/~gwerf/GFED/GFED4/tables/GFED4.1s_N2O.txt
+https://www.geo.vu.nl/~gwerf/GFED/GFED4/tables/GFED4.1s_NH3.txt
+https://www.geo.vu.nl/~gwerf/GFED/GFED4/tables/GFED4.1s_NOx.txt
+https://www.geo.vu.nl/~gwerf/GFED/GFED4/tables/GFED4.1s_OC.txt
+https://www.geo.vu.nl/~gwerf/GFED/GFED4/tables/GFED4.1s_SO2.txt

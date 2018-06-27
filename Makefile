@@ -12,6 +12,9 @@ process: venv files.txt
 download:
 	./scripts/download.sh
 
+download-gfed:
+	./scripts/download_gfed.sh
+
 clean:
 	rm -rf data/*.csv venv
 
