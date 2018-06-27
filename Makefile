@@ -1,4 +1,4 @@
-all: process
+all: process-gfed
 
 venv: scripts/requirements.txt
 	[ -d ./venv ] || python3 -m venv venv
@@ -8,6 +8,9 @@ venv: scripts/requirements.txt
 
 process: venv files.txt
 	./venv/bin/python scripts/process.py
+
+process-gfed: scripts/process-gfed.py
+	./venv/bin/python scripts/process-gfed.py
 
 download:
 	./scripts/download.sh
