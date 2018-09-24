@@ -6,10 +6,10 @@ venv: scripts/requirements.txt
 	./venv/bin/pip install -Ur scripts/requirements.txt
 	touch venv
 
-process: venv files.txt
+process: files.txt venv
 	./venv/bin/python scripts/process.py
 
-process-gfed: scripts/process-gfed.py
+process-gfed: scripts/process-gfed.py venv
 	./venv/bin/python scripts/process-gfed.py
 
 download:
