@@ -90,4 +90,7 @@ df = df.sort_index(axis=1)
 print(df.head())
 print(df.tail())
 
-df.to_csv(root / "data/global-biomass-burning-emissions.csv")
+df.to_csv(
+    root / "data/global-biomass-burning-emissions.csv",
+    float_format="%.3f"
+)
