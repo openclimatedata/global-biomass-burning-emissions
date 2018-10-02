@@ -1,4 +1,4 @@
-all: process-gfed process-gbbe
+all: data/gbbe-extended.csv
 
 venv: scripts/requirements.txt
 	[ -d ./venv ] || python3 -m venv venv
@@ -6,14 +6,14 @@ venv: scripts/requirements.txt
 	./venv/bin/pip install -Ur scripts/requirements.txt
 	touch venv
 
-data/gbbe-extended.csv:
-	./venv/bin/python scripts/combine.py
+data/gbbe-extended.csv: scripts/combine.py data/global-biomass-burning-emissions.csv data/gfed4s.csv
+	./venv/bin/python $<
 
-process-gbbe: files.txt venv
-	./venv/bin/python scripts/process.py
+data/global-biomass-burning-emissions.csv: scripts/process.py files.txt venv
+	./venv/bin/python $<
 
-process-gfed: scripts/process-gfed.py venv
-	./venv/bin/python scripts/process-gfed.py
+data/gfed4s.csv: scripts/process-gfed.py venv
+	./venv/bin/python $<
 
 download-gbbe:
 	./scripts/download.sh
