@@ -1,4 +1,4 @@
-all: process-gfed
+all: process-gfed process-gbbe
 
 venv: scripts/requirements.txt
 	[ -d ./venv ] || python3 -m venv venv
@@ -6,13 +6,16 @@ venv: scripts/requirements.txt
 	./venv/bin/pip install -Ur scripts/requirements.txt
 	touch venv
 
-process: files.txt venv
+data/gbbe-extended.csv:
+	./venv/bin/python scripts/combine.py
+
+process-gbbe: files.txt venv
 	./venv/bin/python scripts/process.py
 
 process-gfed: scripts/process-gfed.py venv
 	./venv/bin/python scripts/process-gfed.py
 
-download:
+download-gbbe:
 	./scripts/download.sh
 
 download-gfed:
