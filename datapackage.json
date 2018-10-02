@@ -1,15 +1,15 @@
 {
   "resources": [
     {
-      "name": "global-biomass-burning-emissions",
       "path": "data/global-biomass-burning-emissions.csv",
+      "name": "global-biomass-burning-emissions",
       "format": "csv",
       "mediatype": "text/csv",
       "schema": {
         "fields": [
           {
             "name": "Year",
-            "type": "integer",
+            "type": "year",
             "description": "Year"
           },
           {
@@ -68,6 +68,65 @@
           }
         ],
         "primaryKey": "Year"
+      }
+    },
+    {
+      "path": "data/gfed4s.csv",
+      "name": "gfed4s",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "year",
+            "format": "default"
+          },
+          {
+            "name": "BC",
+            "type": "number",
+            "format": "default"
+          },
+          {
+            "name": "CH4",
+            "type": "number",
+            "format": "default"
+          },
+          {
+            "name": "CO",
+            "type": "number",
+            "format": "default"
+          },
+          {
+            "name": "N2O",
+            "type": "number",
+            "format": "default"
+          },
+          {
+            "name": "NH3",
+            "type": "number",
+            "format": "default"
+          },
+          {
+            "name": "NOx",
+            "type": "number",
+            "format": "default"
+          },
+          {
+            "name": "OC",
+            "type": "number",
+            "format": "default"
+          },
+          {
+            "name": "SO2",
+            "type": "number",
+            "format": "default"
+          }
+        ],
+        "primaryKey": "Year",
+        "missingValues": [
+          ""
+        ]
       }
     }
   ],
