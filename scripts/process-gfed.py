@@ -41,14 +41,14 @@ nmvoc = ["C2H6", "CH3OH", "C2H5OH", "C3H8", "C2H2", "C2H4", "C3H6", "C5H8", "C10
 df = pd.DataFrame(out)
 df.index.name = "Year"
 df["NMVOC"] = df[nmvoc].sum(axis=1)
-df.index = pd.PeriodIndex(df.index, freq="A")
+
 gbbe = read_datapackage(root / "datapackage.json", "global-biomass-burning-emissions")
 
 # Test for sufficient equality of NMVOC sum with GBBE data
 # where it is already combined.
 assert_almost_equal(
-    gbbe.NMVOC.loc['1997':'2015'].round(0),
-    df["NMVOC"].loc['1997':'2015'].round(0)
+    gbbe.NMVOC.loc[1997:2015].round(0),
+    df["NMVOC"].loc[1997:2015].round(0)
 )
 
 df.to_csv(root / "data/gfed4s.csv")

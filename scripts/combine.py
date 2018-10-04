@@ -8,7 +8,7 @@ root = Path(__file__).parents[1]
 dp = read_datapackage(root / "datapackage.json")
 
 df = pd.concat([
-    dp["global-biomass-burning-emissions"].loc[:"1997"],
+    dp["global-biomass-burning-emissions"].loc[:1996],
     dp["gfed4s"][dp["global-biomass-burning-emissions"].columns]
     ])
 

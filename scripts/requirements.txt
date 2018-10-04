@@ -1,4 +1,6 @@
-xarray
-pandas
-tqdm
-netCDF4
+numpy>=1.14.5
+xarray>=0.10.7
+pandas>=0.23.1
+tqdm>=4.23.4
+netCDF4>=1.4.0
+pandas_datapackage_reader>=0.11.0
