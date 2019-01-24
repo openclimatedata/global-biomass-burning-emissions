@@ -23,7 +23,7 @@ for name in files:
         )
         f.seek(0)
         data = pd.read_table(f, skiprows=7, delim_whitespace=True, nrows=15)
-        data = data.set_index("Region").T.loc['1997':'2017']
+        data = data.set_index("Region").T.loc['1997':'2018']
         data.index = [int(i) for i in data.index]
         data = data.Global
         data = data / 10**(12 - factor)  # to Tg
