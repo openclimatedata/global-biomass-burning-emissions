@@ -14,15 +14,15 @@ out = {}
 for name in files:
     path = root / "raw_data" / name
     with open(path) as f:
-        # Read the 4th row with unit information
-        for _ in range(3):
+        # Read the 3rd row with unit information
+        for _ in range(2):
             f.readline()
         unit = f.readline()
         factor = int(
             unit.split("estimates in ")[1].split(" g ")[0].split("E")[1]
         )
         f.seek(0)
-        data = pd.read_table(f, skiprows=8, delim_whitespace=True, nrows=15)
+        data = pd.read_table(f, skiprows=7, delim_whitespace=True, nrows=15)
         data = data.set_index("Region").T.loc['1997':'2017']
         data.index = [int(i) for i in data.index]
         data = data.Global
