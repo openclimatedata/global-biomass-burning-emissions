@@ -40,7 +40,7 @@ nmvoc = ["C2H6", "CH3OH", "C2H5OH", "C3H8", "C2H2", "C2H4", "C3H6", "C5H8", "C10
 
 df = pd.DataFrame(out)
 df.index.name = "Year"
-df["NMVOC"] = df[nmvoc].sum(axis=1)
+df["NMVOC"] = df[nmvoc].sum(axis=1).round(3)
 
 gbbe = read_datapackage(root / "datapackage.json", "global-biomass-burning-emissions")
 
