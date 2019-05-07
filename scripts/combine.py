@@ -5,11 +5,10 @@ from pathlib import Path
 
 root = Path(__file__).parents[1]
 
-dp = read_datapackage(root / "datapackage.json")
+gbbe = read_datapackage(root / "datapackage.json", "global-biomass-burning-emissions")
 
-df = pd.concat([
-    dp["global-biomass-burning-emissions"].loc[:1996],
-    dp["gfed4s"][dp["global-biomass-burning-emissions"].columns]
-    ])
+gfed4s = read_datapackage(root / "datapackage.json", "gfed4s")
+
+df = pd.concat([gbbe.loc[:1996], gfed4s[gbbe.columns]])
 
 df.to_csv(root / "data/gbbe-extended.csv", float_format="%.3f")
