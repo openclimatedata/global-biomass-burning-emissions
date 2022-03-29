@@ -2,7 +2,7 @@ import pandas as pd
 
 from pandas_datapackage_reader import read_datapackage
 from pathlib import Path
-from pandas.util.testing import assert_almost_equal
+from pandas.testing import assert_series_equal
 
 root = Path(__file__).parents[1]
 
@@ -14,16 +14,16 @@ out = {}
 for name in files:
     path = root / "raw_data" / name
     with open(path) as f:
-        # Read the 3rd row with unit information
-        for _ in range(2):
+        # Read the 6th row with unit information
+        for _ in range(5):
             f.readline()
         unit = f.readline()
         factor = int(
             unit.split("estimates in ")[1].split(" g ")[0].split("E")[1]
         )
         f.seek(0)
-        data = pd.read_table(f, skiprows=7, delim_whitespace=True, nrows=15)
-        data = data.set_index("Region").T.loc['1997':'2018']
+        data = pd.read_table(f, skiprows=10, delim_whitespace=True, nrows=15)
+        data = data.set_index("Region").T.loc['1997':'2021']
         data.index = [int(i) for i in data.index]
         data = data.Global
         data = data / 10**(12 - factor)  # to Tg
@@ -46,9 +46,10 @@ gbbe = read_datapackage(root / "datapackage.json", "global-biomass-burning-emiss
 
 # Test for sufficient equality of NMVOC sum with GBBE data
 # where it is already combined.
-assert_almost_equal(
+assert_series_equal(
     gbbe.NMVOC.loc[1997:2015].round(0),
-    df["NMVOC"].loc[1997:2015].round(0)
+    df["NMVOC"].loc[1997:2015].round(0),
+    check_names=False
 )
 
 df.to_csv(root / "data/gfed4s.csv")
